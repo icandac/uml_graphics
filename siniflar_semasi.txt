@@ -1,0 +1,59 @@
+@startuml
+
+Class Kullanici {
+	<b>methods</b>
+	arkadas olarak ekleme()
+	eklenen arkadasi kabul etme()
+	urun ekleme()
+	urun olusturma/degistirme()()
+	yorum yapma(p)()
+	yorum degistirme(p)()
+	
+	--
+	<b>attributes</b>
+}
+
+Class Urun {
+	<b>methods</b>
+	--
+	<b>attributes</b>
+}
+
+Class Proje {
+	<b>methods</b>
+	--
+	<b>attributes</b>
+}
+
+Class Isbirligi_Yapma {
+	<b>methods</b>
+	--
+	<b>attributes</b>
+}
+
+Class Yorum {
+	<b>methods</b>
+	--
+	<b>attributes</b>
+}
+
+Class Etiket {
+	<b>methods</b>
+	--
+	<b>attributes</b>
+}
+
+Class Arkadaslik {
+	<b>methods</b>
+	arkadas ekleme()
+	arkadas silme()
+	arkadas engelleme()
+	mesajlasma()
+	--
+	<b>attributes</b>
+	Arkadas adi
+	Arkadas olma tarihi	
+}
+
+
+@enduml

@@ -5,42 +5,107 @@ Class Kullanici {
 	arkadas olarak ekleme()
 	eklenen arkadasi kabul etme()
 	urun ekleme()
-	urun olusturma/degistirme()()
+	urun olusturma/degistirme(p)()
 	yorum yapma(p)()
 	yorum degistirme(p)()
-	
+	bir arkadasin yaptigini paylasma(p)()
+	tavsiye etme()
+	ozel mesaj yazma()
+	proje acma()
+	proje degistirme()
+	kullanici bilgisi()
+	login/logout olma()
+	urunu yayinlama()
+	yayinlanan urunu degistirme()
 	--
 	<b>attributes</b>
+	fotograf
+	kutum bilgisi
+	unvan
 }
 
 Class Urun {
 	<b>methods</b>
+	gorunur/gizli olma()
+	indirilme()
+	degistirilebilme()
+	altina yorum yapilabilme()
+	etiketlenebilme
+	paylasilma
 	--
 	<b>attributes</b>
+	data barindirma
+	analiz (grafik) barindirma
+	latex dosyasi barindirma
+	okunabilir dosya (pdf, ps vs.) barindirma
+	max. buyukluk
+	isim
+	olusturulma/degistirilme tarihi
+	kimler tarafindan paylasilmis oldugu
+	gorulme sayisi
+	indirilme sayisi
 }
 
 Class Proje {
 	<b>methods</b>
+	kullanici kazanma()
+	icine urun alma()
+	icinde urun degistirilme()
+	mesajlasma()
+	icindekilerin yayinlanmasi()
+	acilma/kapatilma()
 	--
 	<b>attributes</b>
+	adi
+	olusturulma tarihi
+	degistirilme tarihleri
+	olglar
+	altindaki isbirlikciler
+	altindaki dosyalar
 }
 
 Class Isbirligi_Yapma {
 	<b>methods</b>
+	ortak proje acma()
+	acilmis projeye girme()
+	mesajlasma()
+	isbirlikcini urununu degistirme()
 	--
 	<b>attributes</b>
+	isbirliginin yapilma tarihi
+	birlikte degistirilebilen urunler
+	isbirlikcilerin urun degistirme tarihleri
+	beraber calisma sureleri
 }
 
 Class Yorum {
 	<b>methods</b>
+	yorum olusturma()
+	yorum degistirme()
+	yorum silme()
 	--
 	<b>attributes</b>
+	olusturuma tarihi
+	degistirilme tarihi
+	neyin altina yorum yapildigi(urun/proje adi)
+	metin(icerik)
+	max karakter sayisi
 }
 
 Class Etiket {
 	<b>methods</b>
+	olusturma()
+	degistirme()
+	etiketin altindakilere ulasabilme()
 	--
 	<b>attributes</b>
+	olusturulma tarihi
+	degistirilme tarihi
+	adi
+	max karakter sayisi
+	ayni etiket altindaki urunler
+	olusturan kullanici kimligi
+	urun ekleyen kullanicilarin kimlikleri
 }
 
 Class Arkadaslik {

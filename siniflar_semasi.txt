@@ -1,123 +1,123 @@
 @startuml
 
-Class Kullanici {
+Class kullanıcı {
 	<b>methods</b>
-	arkadas olarak ekleme()
-	eklenen arkadasi kabul etme()
-	urun ekleme()
-	urun olusturma/degistirme(p)()
+	arkadaş olarak ekleme()
+	eklenen arkadaşı kabul etme()
+	ürün ekleme()
+	ürün olusturma/değiştirme(p)()
 	yorum yapma(p)()
-	yorum degistirme(p)()
-	bir arkadasin yaptigini paylasma(p)()
+	yorum değiştirme(p)()
+	bir arkadaşin yaptığını paylaşma(p)()
 	tavsiye etme()
-	ozel mesaj yazma()
-	proje acma()
-	proje degistirme()
-	kullanici bilgisi()
-	login/logout olma()
-	urunu yayinlama()
-	yayinlanan urunu degistirme()
+	özel mesaj yazma()
+	proje açma()
+	proje değiştirme()
+	kullanıcı bilgisi()
+	giriş/çıkış yapma()
+	ürünu yayınlama()
+	yayınlanan ürünü değiştirme()
 	--
 	<b>attributes</b>
-	fotograf
-	kutum bilgisi
-	unvan
+	fotoğraf
+	kurum bilgisi
+	ünvan
 }
 
-Class Urun {
+Class ürün {
 	<b>methods</b>
-	gorunur/gizli olma()
+	görünür/gizli olma()
 	indirilme()
-	degistirilebilme()
-	altina yorum yapilabilme()
+	değiştirilebilme()
+	altına yorum yapılabilme()
 	etiketlenebilme
-	paylasilma
+	paylaşılma
 	--
 	<b>attributes</b>
-	data barindirma
-	analiz (grafik) barindirma
-	latex dosyasi barindirma
-	okunabilir dosya (pdf, ps vs.) barindirma
-	max. buyukluk
+	data barındırma
+	analiz (grafik) barındırma
+	latex dosyasi barındırma
+	okunabilir dosya (pdf, ps vs.) barındırma
+	max. büyüklük
 	isim
-	olusturulma/degistirilme tarihi
-	kimler tarafindan paylasilmis oldugu
-	gorulme sayisi
-	indirilme sayisi
+	oluşturulma/değiştirilme tarihi
+	kimler tarafından paylaşilmis olduğu
+	görülme sayısı
+	indirilme sayısı
 }
 
 Class Proje {
 	<b>methods</b>
-	kullanici kazanma()
-	icine urun alma()
-	icinde urun degistirilme()
-	mesajlasma()
-	icindekilerin yayinlanmasi()
-	acilma/kapatilma()
+	kullanıcı kazanma()
+	içine ürün alma()
+	içinde ürün değiştirilme()
+	mesajlaşma()
+	içindekilerin yayınlanması()
+	açılma/kapatılma()
 	--
 	<b>attributes</b>
-	adi
-	olusturulma tarihi
-	degistirilme tarihleri
+	adı
+	oluşurulma tarihi
+	degiştirilme tarihleri
 	olglar
-	altindaki isbirlikciler
-	altindaki dosyalar
+	altındaki işbirlikçiler
+	altındaki dosyalar
 }
 
-Class Isbirligi_Yapma {
+Class İşbirliği_Yapma {
 	<b>methods</b>
-	ortak proje acma()
-	acilmis projeye girme()
-	mesajlasma()
-	isbirlikcini urununu degistirme()
+	ortak proje açma()
+	açılmış projeye girme()
+	mesajlaşma()
+	işbirlikçinin ürününü değiştirme()
 	--
 	<b>attributes</b>
-	isbirliginin yapilma tarihi
-	birlikte degistirilebilen urunler
-	isbirlikcilerin urun degistirme tarihleri
-	beraber calisma sureleri
+	işbirliğinin yapılma tarihi
+	birlikte değiştirilebilen ürünler
+	işbirlikçilerin ürün değiştirme tarihleri
+	beraber çalışma süreleri
 }
 
 Class Yorum {
 	<b>methods</b>
-	yorum olusturma()
-	yorum degistirme()
+	yorum oluşturma()
+	yorum değiştirme()
 	yorum silme()
 	--
 	<b>attributes</b>
-	olusturuma tarihi
-	degistirilme tarihi
-	neyin altina yorum yapildigi(urun/proje adi)
-	metin(icerik)
-	max karakter sayisi
+	oluşturulma tarihi
+	değiştirilme tarihi
+	neyin altına yorum yapıldığı(ürün/proje adı)
+	metin(içerik)
+	max karakter sayısı
 }
 
 Class Etiket {
 	<b>methods</b>
-	olusturma()
-	degistirme()
-	etiketin altindakilere ulasabilme()
+	oluşturma()
+	değiştirme()
+	etiketin altındakilere ulaşabilme()
 	--
 	<b>attributes</b>
-	olusturulma tarihi
-	degistirilme tarihi
-	adi
-	max karakter sayisi
-	ayni etiket altindaki urunler
-	olusturan kullanici kimligi
-	urun ekleyen kullanicilarin kimlikleri
+	oluşturulma tarihi
+	değiştirilme tarihi
+	adı
+	max karakter sayısı
+	aynı etiket altındaki ürünler
+	oluşturan kullanıcı kimliği
+	ürün ekleyen kullanıcılarin kimlikleri
 }
 
-Class Arkadaslik {
+Class arkadaşlık {
 	<b>methods</b>
-	arkadas ekleme()
-	arkadas silme()
-	arkadas engelleme()
-	mesajlasma()
+	arkadaş ekleme()
+	arkadaş silme()
+	arkadaş engelleme()
+	mesajlaşma()
 	--
 	<b>attributes</b>
-	Arkadas adi
-	Arkadas olma tarihi	
+	arkadaş adı
+	arkadaş olma tarihi	
 }
 
 

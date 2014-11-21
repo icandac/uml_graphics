@@ -1,104 +1,104 @@
 @startuml
 
 Class User {
-	be confirmed as a friend()
-	be commented(p)()
-	be banned as a friend(p)()
-	be endorsed()
-	be taken private messages()
-	be a member of a project()
-	changing a project()
-	account knowloedge()
-	login/logout()
-	publishing a product()
-	changing a published product()
+	beConfirmedFriend()
+	beCommented(p)()
+	beBannedFriend(p)()
+	beEndorsed()
+	beTakenPrivateMessages()
+	beMemberProject()
+	changingProject()
+	accountKnowloedge()
+	loginLogout()
+	publishingProduct()
+	changingPublishedProduct()
 	--
 	photography
-	institution info
-	ünvan
+	institutionInfo
+	degree
 }
 
 Class Entry {
-	be visible/invisible()
+	beVisInvis()
 	downloadablity()
 	changablity()
-	ability of making comments()
-	be able to be tagged
-	be shared
+	makingComments()
+	beAbletobeTagged
+	beShared
 	--
-	data accomodation
-	code accomodation
-	published article accomodation
-	max. size
+	dataAccomodation
+	codeAccomodation
+	publishedArticleAccomodation
+	maxSize
 	name
-	dates of creating/changing
-	by whom it is shared
-	number of to be seen
-	number of downloading
+	datesCreatingChanging
+	byWhomShared
+	numberofSeen
+	numberDownloading
 }
 
 Class Project {
-	gaining user()
-	taking entries inside()
-	changing products inside()
+	gainingUser()
+	takingEntries()
+	changingProducts()
 	messaging()
-	publishing something inside()
-	openning/closing()
+	publishing()
+	openning()
+	closing()
 	--
 	name
-	date of creating
-	dates of changes
-	logs of login/logout
-	collaborators under the project
-	files under the project
+	dateCreating
+	datesChanges
+	logsLoginLogout
+	collaborators
+	filesofProject
 }
 
 Class Collaboration {
-	openning a sharing project()
-	joining a project()
-	messaging()
-	changing a product of another collaborator()
+	openningProject()
+	joiningProject()
+	message()
+	changingProduct()
 	--
-	date of collaboration
-	the products that are be able to change together
-	logs of changes of products
-	accompanying working timetables
+	dateCollaboration
+	theProducts
+	logsProducts
+	accompanyingWorkingTimes
 }
 
 Class Comment {
-	creating a comment()
-	changing a comment()
-	deleting a comment()
+	createComment()
+	changeComment()
+	deleteComment()
 	--
-	date of creating
-	date of changes of comments
-	name of the product/project
-	text(content)
-	max number of characters
+	dateCreate
+	dateChangeComment
+	nameProductProject
+	content
+	maxChar
 }
 
 Class Tag {
-	creating()
-	changing()
-	reaching the products under a tag()
+	create()
+	change()
+	reachProducts()
 	--
-	date of creating
-	date of changes
+	dateCreate
+	dateChanges
 	name
-	max number of characters
-	the products that are under the same tag
-	identity of the users who has created
-	the identities of the users who has added products
+	maxChar
+	ProductTag
+	idUser
 }
 
 Class Friend {
-	adding a user as a friend())
-	deleting an existing friend()
-	blocking a friend()
-	messaging()
+	addFriend())
+	deleteFriend()
+	blockFriend()
+	message()
 	--
-	name of the friend
-	date of being friends	
+	nameFriend
+	dateFriends	
 }
 
 

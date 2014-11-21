@@ -1,0 +1,51 @@
+@startuml
+
+node "FrontEnd" {
+	[Client (Browser)]
+}
+
+node "BackEnd" {
+	[Proxy Server / Load Balancer]
+
+}
+
+node "PaaS" {
+	frame "OpenStack" {
+		[Object Storage]
+		[Block Storage]
+		[Docker]
+		[Network Service]
+		[Image Service]
+	}
+
+	[Tornado]
+
+	frame "CoordinationService" {
+
+	}
+
+	frame "Solr" {
+		[Research Service]
+		[Analytics Service]
+	}
+
+	frame "AdminstrativeServices" {
+		[Logging]
+		[User Management]
+	}
+
+	frame "UserInteractionServices" {
+		[Chat Service] <-> [Django]
+	}
+}
+
+FrontEnd <-left-> [Proxy Server / Load Balancer]
+PaaS <---left---> BackEnd: Computation
+BackEnd <---left---> PaaS: Social Network
+[Tornado] <-down-> OpenStack
+CoordinationService <-up-> OpenStack
+CoordinationService <-down-> Solr
+CoordinationService <-down-> AdminstrativeServices
+CoordinationService <-down-> UserInteractionServices
+
+@enduml

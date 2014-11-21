@@ -7,99 +7,98 @@ Class User {
 	be endorsed()
 	be taken private messages()
 	be a member of a project()
-	proje değiştirme()
-	kullanıcı bilgisi()
-	giriş/çıkış yapma()
-	ürünu yayınlama()
-	yayınlanan ürünü değiştirme()
+	changing a project()
+	account knowloedge()
+	login/logout()
+	publishing a product()
+	changing a published product()
 	--
-	fotoğraf
-	kurum bilgisi
+	photography
+	institution info
 	ünvan
 }
 
-Class Product {
-	görünür/gizli olma()
-	indirilme()
-	değiştirilebilme()
-	altına yorum yapılabilme()
+Class Entry {
+	be visible/invisible()
+	downloadablity()
+	changablity()
+	ability of making comments()
 	be able to be tagged
 	be shared
 	--
-	data barındırma
-	analiz (grafik) barındırma
-	latex dosyasi barındırma
-	okunabilir dosya (pdf, ps vs.) barındırma
-	max. büyüklük
-	isim
-	oluşturulma/değiştirilme tarihi
-	kimler tarafından paylaşilmis olduğu
-	görülme sayısı
-	indirilme sayısı
+	data accomodation
+	code accomodation
+	published article accomodation
+	max. size
+	name
+	dates of creating/changing
+	by whom it is shared
+	number of to be seen
+	number of downloading
 }
 
 Class Project {
-	kullanıcı kazanma()
-	içine ürün alma()
-	içinde ürün değiştirilme()
-	mesajlaşma()
-	içindekilerin yayınlanması()
-	açılma/kapatılma()
+	gaining user()
+	taking entries inside()
+	changing products inside()
+	messaging()
+	publishing something inside()
+	openning/closing()
 	--
-	adı
-	oluşurulma tarihi
-	degiştirilme tarihleri
-	olglar
-	altındaki işbirlikçiler
-	altındaki dosyalar
+	name
+	date of creating
+	dates of changes
+	logs of login/logout
+	collaborators under the project
+	files under the project
 }
 
 Class Collaboration {
-	ortak proje açma()
-	açılmış projeye girme()
-	mesajlaşma()
-	işbirlikçinin ürününü değiştirme()
+	openning a sharing project()
+	joining a project()
+	messaging()
+	changing a product of another collaborator()
 	--
-	işbirliğinin yapılma tarihi
-	birlikte değiştirilebilen ürünler
-	işbirlikçilerin ürün değiştirme tarihleri
-	beraber çalışma süreleri
+	date of collaboration
+	the products that are be able to change together
+	logs of changes of products
+	accompanying working timetables
 }
 
 Class Comment {
-	yorum oluşturma()
-	yorum değiştirme()
-	yorum silme()
+	creating a comment()
+	changing a comment()
+	deleting a comment()
 	--
-	oluşturulma tarihi
-	değiştirilme tarihi
-	neyin altına yorum yapıldığı(ürün/proje adı)
-	metin(içerik)
-	max karakter sayısı
+	date of creating
+	date of changes of comments
+	name of the product/project
+	text(content)
+	max number of characters
 }
 
 Class Tag {
-	oluşturma()
-	değiştirme()
-	etiketin altındakilere ulaşabilme()
+	creating()
+	changing()
+	reaching the products under a tag()
 	--
-	oluşturulma tarihi
-	değiştirilme tarihi
-	adı
-	max karakter sayısı
-	aynı etiket altındaki ürünler
-	oluşturan kullanıcı kimliği
-	ürün ekleyen kullanıcılarin kimlikleri
+	date of creating
+	date of changes
+	name
+	max number of characters
+	the products that are under the same tag
+	identity of the users who has created
+	the identities of the users who has added products
 }
 
 Class Friend {
-	arkadaş ekleme()
-	arkadaş silme()
-	arkadaş engelleme()
-	mesajlaşma()
+	adding a user as a friend())
+	deleting an existing friend()
+	blocking a friend()
+	messaging()
 	--
-	arkadaş adı
-	arkadaş olma tarihi	
+	name of the friend
+	date of being friends	
 }
 
 

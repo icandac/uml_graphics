@@ -1,0 +1,15 @@
+@startuml
+
+Class User <|-- Class FullUser
+
+Class User <|-- Class Reader 
+
+Class Entry <|-- Class Article
+
+Class Entry <|-- Class Code
+
+Class Entry <|-- Class Data
+
+Class Project
+
+@enduml

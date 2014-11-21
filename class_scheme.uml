@@ -101,5 +101,23 @@ Class Friend {
 	dateFriends	
 }
 
+Class User <|-- Class FullUser
+
+Class User <|-- Class Reader
+
+Class User *-- Class Profile
+
+Class Entry <|-- Class Article
+
+Class Entry <|-- Class Code
+
+Class Entry <|-- Class Data
+
+Class Project o-- Class Entry
+
+Class Project o-- Class User
+
+Class User -- Class Entry
+
 
 @enduml
